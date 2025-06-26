@@ -22,14 +22,19 @@ app.get("/", (req, res) => {
           h1 { color: #2d6cdf; }
           ul { background: #fff; padding: 16px 24px; border-radius: 8px; }
           a { color: #2d6cdf; text-decoration: none; }
+          .notice { background: #fffbe6; border: 1px solid #ffe58f; padding: 12px 18px; margin-bottom: 14px; border-radius: 8px; }
         </style>
       </head>
       <body>
         <h1>Shortener & Redirect URL</h1>
         <p>
-          Website ini dibuat untuk memudahkan Anda membuat short link (URL pendek) atau redirect ke berbagai link tujuan seperti YouTube, GitHub, dan lainnya. 
+          Website ini dibuat untuk memudahkan Anda membuat short link (URL pendek) atau redirect ke berbagai link tujuan seperti YouTube, GitHub, dan lainnya.
           Cukup gunakan path yang tersedia untuk langsung diarahkan ke URL tujuan.
         </p>
+        <div class="notice">
+          <b>Info:</b> Saat ini, jika Anda ingin menambahkan URL baru ke daftar short link, silakan hubungi admin untuk merequest penambahannya.<br>
+          Ke depannya, akan disediakan fitur agar pengguna bisa menambah URL sendiri melalui form input di website ini.
+        </div>
         <h2>Contoh Short Link yang Tersedia:</h2>
         <ul>
           ${pathurl.map(item => `<li><a href="${item.path}">${item.path}</a> &rarr; <span>${item.url}</span></li>`).join("")}
